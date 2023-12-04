@@ -23,7 +23,7 @@ def get_comma_values(df, key: str, sep=", ") -> pd.DataFrame:
 
 def replace_punctuation(input_value: str) -> str:
     input_value = input_value.lower()
-    punctuation = ",./<>?;':\"[]{}`1234567890-=\~!@#$%^&*()_+|"
+    punctuation = ",./<>?;:\"[]{}`1234567890-=\~!@#$%^&*()_+|"
     for character in punctuation:
         input_value = " ".join(input_value.split(character))
     return input_value
@@ -109,6 +109,7 @@ print(2,
 exit()
 
 # Saves the Averages to CSV
+print("Saving File!")
 word_averages.to_csv("outfile.csv")
 print(word_averages)
 print("\t~ Finished")
