@@ -106,6 +106,13 @@ print(2,
     )
 )
 
+
+all_word_averages = get_combined_words(
+    word_averages \
+        .sort_values("Speed (WPM)")
+)
+# with open("file.md", "w") as f: f.write(all_word_averages)
+
 exit()
 
 # Saves the Averages to CSV
